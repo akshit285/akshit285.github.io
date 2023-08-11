@@ -1,0 +1,61 @@
+/* main container */
+#main{
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+/* main heading */
+h1{
+    font-style: italic;
+    color: orangered;
+    font-size: 45px;
+}
+
+/* Table */
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* text inside table */
+#b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8, #b9{
+    width: 80px;
+    height: 52px;
+    margin: auto;
+    border: 1px solid grey;
+    border-radius: 6px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* table boxes */
+.center input[type="text"]:hover {
+    background-color: lightgrey;
+}
+
+/* Reset button */
+#Reset{
+    box-sizing: border-box;
+    width: 95px;
+    height: 40px;
+    border: 1px solid dodgerblue;
+    margin: auto;
+    border-radius: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* result */
+#result {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+/* Game Instruction Text */
+#ins {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+}
