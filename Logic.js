@@ -1,5 +1,56 @@
 'use strict'
 window.addEventListener('load',bindEvents);
+window.addEventListener('load', () => {
+    showPopup(true);
+});
+
+function showPopup(bool) {
+    if (bool) {
+        document.getElementById('popup').classList.add('show');
+        document.body.classList.add('blur'); // Add blur class to body
+    } else {
+        document.getElementById('popup').classList.remove('show');
+        document.body.classList.remove('blur'); // Remove blur class from body
+
+        // Play the background music when the popup is hidden
+        document.getElementById('bg-music').play();
+    }
+}
+// function showPopup(bool) {
+//     if (bool) {
+//       document.getElementById('popup').style.visibility = 'visible'
+//     } else {
+//       document.getElementById('popup').style.visibility = 'hidden'
+//     }
+// }
+
+// Play background music
+function musicPlay(){
+    var audio = document.getElementById('bg-music');
+    audio.play();
+}
+
+// Pause background music
+function musicPause() {
+    var audio = document.getElementById('bg-music');
+    audio.pause();
+}
+
+// JavaScript to add click sound to the buttons b1 to b9
+function playButtonClickSound() {
+    var soundEffect = document.getElementById('button-click-sound');
+    soundEffect.currentTime = 0; // Reset the audio to the beginning
+    soundEffect.play();
+}
+
+
+function playGameOverSound() {
+    var soundEffect = document.getElementById('game-over-sound');
+    soundEffect.currentTime = 0; // Reset the audio to the beginning
+    soundEffect.play();
+}
+
+
 
 function bindEvents(){
     document.querySelector("#b1").addEventListener('click',func1);
@@ -45,7 +96,11 @@ function nextTurn(){
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
+        musicPause();
         window.alert("**Player 1 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(39vw, 2.25vw) rotate(0deg)";
+        document.querySelector(".line").style.width = "19.5vw";
     }
 
     else if((b1=='o'||b1=='O') && (b4=='o'||b4=='O') && (b7=='o'||b7=='O')){
@@ -56,7 +111,11 @@ function nextTurn(){
         document.getElementById("b6").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
+        musicPause();
         window.alert("**Player 1 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(35.15vw, 7vw) rotate(90deg)";
+        document.querySelector(".line").style.width = "12.75vw";
     }
     
     else if((b4=='o'||b4=='O') && (b5=='o'||b5=='O') && (b6=='o'||b6=='O')){
@@ -67,7 +126,11 @@ function nextTurn(){
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
+        musicPause();
         window.alert("**Player 1 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(39vw, 7.15vw) rotate(0deg)";
+        document.querySelector(".line").style.width = "19.5vw";
     }
 
     else if((b7=='o'||b7=='O') && (b8=='o'||b8=='O') && (b9=='o'||b9=='O')){
@@ -78,7 +141,11 @@ function nextTurn(){
         document.getElementById("b4").disabled = true;
         document.getElementById("b5").disabled = true;
         document.getElementById("b6").disabled = true;
+        musicPause();
         window.alert("**Player 1 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(39vw, 12vw) rotate(0deg)";
+        document.querySelector(".line").style.width = "19.5vw";
     }
 
     else if((b2=='o'||b2=='O') && (b5=='o'||b5=='O') && (b8=='o'||b8=='O')){
@@ -89,7 +156,11 @@ function nextTurn(){
         document.getElementById("b6").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b9").disabled = true;
+        musicPause();
         window.alert("**Player 1 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(42.35vw, 7vw) rotate(90deg)";
+        document.querySelector(".line").style.width = "12.75vw";
     }
 
     else if((b3=='o'||b3=='O') && (b6=='o'||b6=='O') && (b9=='o'||b9=='O')){
@@ -100,7 +171,11 @@ function nextTurn(){
         document.getElementById("b5").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
+        musicPause();
         window.alert("**Player 1 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(49.65vw, 7vw) rotate(90deg)";
+        document.querySelector(".line").style.width = "12.75vw";
     }
 
     else if((b1=='o'||b1=='O') && (b5=='o'||b5=='O') && (b9=='o'||b9=='O')){
@@ -111,7 +186,11 @@ function nextTurn(){
         document.getElementById("b6").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
+        musicPause();
         window.alert("**Player 1 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(38vw, 7vw) rotate(35deg)";
+        document.querySelector(".line").style.width = "21.15vw";
     }
 
     else if((b3=='o'||b3=='O') && (b5=='o'||b5=='O') && (b7=='o'||b7=='O')){
@@ -122,7 +201,11 @@ function nextTurn(){
         document.getElementById("b6").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
+        musicPause();
         window.alert("**Player 1 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(38vw, 7.25vw) rotate(325deg)";
+        document.querySelector(".line").style.width = "21.15vw";
     }
 
     //Checking For Player 2
@@ -134,7 +217,11 @@ function nextTurn(){
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
+        musicPause();
         window.alert("**Player 2 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(39vw, 2.25vw) rotate(0deg)";
+        document.querySelector(".line").style.width = "19.5vw";
     }
 
     else if((b1=='x'||b1=='X') && (b4=='x'||b4=='X') && (b7=='x'||b7=='X')){
@@ -145,7 +232,11 @@ function nextTurn(){
         document.getElementById("b6").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
+        musicPause();
         window.alert("**Player 2 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(35.15vw, 7vw) rotate(90deg)";
+        document.querySelector(".line").style.width = "12.75vw";
     }
     
     else if((b4=='x'||b4=='X') && (b5=='x'||b5=='X') && (b6=='x'||b6=='X')){
@@ -156,7 +247,11 @@ function nextTurn(){
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
+        musicPause();
         window.alert("**Player 2 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(39vw, 7.15vw) rotate(0deg)";
+        document.querySelector(".line").style.width = "19.5vw";
     }
 
     else if((b7=='x'||b7=='X') && (b8=='x'||b8=='X') && (b9=='x'||b9=='X')){
@@ -167,7 +262,11 @@ function nextTurn(){
         document.getElementById("b4").disabled = true;
         document.getElementById("b5").disabled = true;
         document.getElementById("b6").disabled = true;
+        musicPause();
         window.alert("**Player 2 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(39vw, 12vw) rotate(0deg)";
+        document.querySelector(".line").style.width = "19.5vw";
     }
 
     else if((b2=='x'||b2=='X') && (b5=='x'||b5=='X') && (b8=='x'||b8=='X')){
@@ -178,7 +277,11 @@ function nextTurn(){
         document.getElementById("b6").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b9").disabled = true;
+        musicPause();
         window.alert("**Player 2 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(42.35vw, 7vw) rotate(90deg)";
+        document.querySelector(".line").style.width = "12.75vw";
     }
 
     else if((b3=='x'||b3=='X') && (b6=='x'||b6=='X') && (b9=='x'||b9=='X')){
@@ -189,7 +292,11 @@ function nextTurn(){
         document.getElementById("b5").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
+        musicPause();
         window.alert("**Player 2 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(49.65vw, 7vw) rotate(90deg)";
+        document.querySelector(".line").style.width = "12.75vw";
     }
 
     else if((b1=='x'||b1=='X') && (b5=='x'||b5=='X') && (b9=='x'||b9=='X')){
@@ -200,7 +307,11 @@ function nextTurn(){
         document.getElementById("b6").disabled = true;
         document.getElementById("b7").disabled = true;
         document.getElementById("b8").disabled = true;
+        musicPause();
         window.alert("**Player 2 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(38vw, 7vw) rotate(35deg)";
+        document.querySelector(".line").style.width = "21.15vw";
     }
 
     else if((b3=='x'||b3=='X') && (b5=='x'||b5=='X') && (b7=='x'||b7=='X')){
@@ -211,12 +322,18 @@ function nextTurn(){
         document.getElementById("b6").disabled = true;
         document.getElementById("b8").disabled = true;
         document.getElementById("b9").disabled = true;
+        musicPause();
         window.alert("**Player 2 WON**");
+        playGameOverSound();
+        document.querySelector(".line").style.transform = "translate(38vw, 7.25vw) rotate(325deg)";
+        document.querySelector(".line").style.width = "21.15vw";
     }
 
     else if((b1=='X'||b1=='O') && (b2=='X'||b2=='O') && (b3=='X'||b3=='O') && (b4=='X'||b4=='O') && (b5=='X'||b5=='O') && (b6=='X'||b6=='O') && (b7=='X'||b7=='O') && (b8=='X'||b8=='O') && (b9=='X'||b9=='O')) {
         document.getElementById("result").innerText = "Match TIE";
+        musicPause();
         window.alert("**Match TIE**");
+        playGameOverSound();
     }
 
     else{
@@ -231,6 +348,7 @@ function nextTurn(){
 
 }
 
+// Reset function
 function Rfunc(){
     location.reload();
     document.getElementById("b1").value='';
@@ -246,6 +364,7 @@ function Rfunc(){
 
 var flag = 1;
 function func1() {
+    playButtonClickSound();
     if (flag == 1) {
         document.getElementById("b1").value = "O";
         document.getElementById("b1").disabled = true;
@@ -259,6 +378,7 @@ function func1() {
 }
  
 function func2() {
+    playButtonClickSound();
     if (flag == 1) {
         document.getElementById("b2").value = "O";
         document.getElementById("b2").disabled = true;
@@ -272,6 +392,7 @@ function func2() {
 }
  
 function func3() {
+    playButtonClickSound();
     if (flag == 1) {
         document.getElementById("b3").value = "O";
         document.getElementById("b3").disabled = true;
@@ -285,6 +406,7 @@ function func3() {
 }
  
 function func4() {
+    playButtonClickSound();
     if (flag == 1) {
         document.getElementById("b4").value = "O";
         document.getElementById("b4").disabled = true;
@@ -298,6 +420,7 @@ function func4() {
 }
  
 function func5() {
+    playButtonClickSound();
     if (flag == 1) {
         document.getElementById("b5").value = "O";
         document.getElementById("b5").disabled = true;
@@ -311,6 +434,7 @@ function func5() {
 }
  
 function func6() {
+    playButtonClickSound();
     if (flag == 1) {
         document.getElementById("b6").value = "O";
         document.getElementById("b6").disabled = true;
@@ -324,6 +448,7 @@ function func6() {
 }
  
 function func7() {
+    playButtonClickSound();
     if (flag == 1) {
         document.getElementById("b7").value = "O";
         document.getElementById("b7").disabled = true;
@@ -337,6 +462,7 @@ function func7() {
 }
  
 function func8() {
+    playButtonClickSound();
     if (flag == 1) {
         document.getElementById("b8").value = "O";
         document.getElementById("b8").disabled = true;
@@ -350,6 +476,7 @@ function func8() {
 }
  
 function func9() {
+    playButtonClickSound();
     if (flag == 1) {
         document.getElementById("b9").value = "O";
         document.getElementById("b9").disabled = true;
