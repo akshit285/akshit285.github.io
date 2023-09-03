@@ -1,71 +1,114 @@
+Tic Tac Toe game using HTML, CSS and Javascript
+
 🔑**Site Link -** https://akshit285.github.io/
 
 # Tic Tac Toe Game Documentation
-### Introduction
-This documentation provides an overview of a simple Tic Tac Toe game implemented as a web application using HTML, CSS, and JavaScript. The game allows two players to take turns marking cells on a 3x3 grid with their respective symbols ("X" and "O") and determines the winner or a tie based on the rules of the game.
 
 ### Table of Contents
-#### 1. Overview
-Brief description of the game and its purpose.
+#### 1. Introduction
+  - Project Overview
+  - Technologies Used
 
-#### 2. Getting Started
-Instructions for setting up and running the game on a web browser.
+#### 2. Game Description
+  - Game Rules
+  - Gameplay
 
-#### 3. HTML Structure
-Explanation of the HTML structure used to create the game interface.
+#### 3. File Structure
+  - HTML Structure
+  - CSS Styling
+  - JavaScript Logic
 
-#### 4. CSS Styling
-Description of the CSS styles applied to achieve the desired visual appearance.
+#### 4. User Interface
+  - Pop-up Window
+  - Game Board
+  - Game Controls
 
-#### 5. JavaScript Logic
-Explanation of the JavaScript functions responsible for game mechanics.
+#### 5. How to Play
+  - Starting the Game
+  - Making Moves
+  - Winning the Game
 
-#### 6. Gameplay Instructions
-Clear instructions on how to play the game.
+#### 6. Resetting the Game
+#### 7. Sound Effects
+#### 8. Conclusion
 
-#### 7. Conclusion
-Recap of the implemented features and potential areas for further improvement.
+### 1. Introduction
+#### Project Overview
+The Tic Tac Toe Game is a web-based two-player game that allows users to play the classic Tic Tac Toe game. It is created using HTML, CSS, and JavaScript, providing a simple and interactive user experience.
 
-### 1. Overview
-The Tic Tac Toe game is a classic two-player game where each player takes turns marking a cell on a 3x3 grid. The objective is to form a horizontal, vertical, or diagonal line of three matching symbols before the opponent does.
+#### Technologies Used
+- HTML
+- CSS
+- JavaScript
 
-### 2. Getting Started
-To play the game, follow these steps:
+### 2. Game Description
+#### Game Rules
+- The game is played on a 3x3 grid.
+- Two players take turns to place their symbols on the grid.
+- The first player uses "O", and the second player uses "X".
+- The player who successfully forms a line of three of their symbols (horizontally, vertically, or diagonally) wins the game.
+- If all grid cells are filled, and no player has won, the game ends in a draw.
 
-1. Open the "index.html" file in a modern web browser.
-2. The game board will be displayed, showing an empty grid and the current player's turn.
-3. Click on an available cell to place your symbol (either "X" or "O").
-4. The game will automatically determine the winner or a tie and display the result.
-5. To start a new game, click the "Reset" button.
+#### Gameplay
+- Players take turns by clicking on empty cells to place their symbols.
+- The game keeps track of the current player's turn.
+- Sound effects and visual cues are provided for button clicks and game outcomes.
 
-### 3. HTML Structure
-The game interface is structured using HTML elements. Key elements include:
+### 3. File Structure
+#### HTML Structure
+- The HTML file defines the structure of the game website.
+- It includes the game board, pop-up window, navigation bar, and audio elements.
+- JavaScript and CSS files are linked in the <head> section.
 
-- The main <div> container with the ID "main."
-- Heading elements to display the game title and instructions.
-- A <table> element with cells represented as <input> elements.
+#### CSS Styling
+- CSS styles are applied to create an appealing and responsive user interface.
+- Classes are used for styling the pop-up window, game board, and controls.
 
-### 4. CSS Styling
-CSS styles are applied to enhance the visual presentation of the game. Notable styles include:
+#### JavaScript Logic
+- JavaScript is used to implement game functionality.
+- Event listeners are added to handle user interactions and control game flow.
+- Functions are defined to check for win conditions, update the game state, and manage sound effects.
 
-- Centering the game board using the "center" class.
-- Styling the cells with borders, rounded corners, and hover effects.
-- Styling the reset button and result message.
+### 4. User Interface
+#### Pop-up Window
+- When the page loads, a pop-up window appears, welcoming the player to the game.
+- It contains an image, game title, and a "Let's Play" button.
+- The pop-up window can be closed to start the game.
 
-### 5. JavaScript Logic
-The JavaScript code in "Logic.js" is responsible for handling game mechanics, including:
+#### Game Board
+- The game board consists of a 3x3 grid of input fields.
+- Players click on empty fields to place their symbols ("O" or "X").
+- The game keeps track of player turns and displays the current player's symbol.
+- A result message is shown below the board to indicate the game outcome.
 
-- Assigning event listeners to cells and the reset button.
-- Implementing functions for each cell's click event.
-- Keeping track of the current player's turn using a flag.
-- Checking for a win or tie condition after each move.
+#### Game Controls
+- Play and pause buttons are provided to control the background music.
+- A "Reset" button allows users to restart the game at any time.
 
-### 6. Gameplay Instructions
-- Player 1 is assigned the symbol "O," and Player 2 is assigned the symbol "X."
-- Players take turns clicking on an empty cell to place their symbol.
-- The game automatically checks for a win or tie condition after each move.
-- The result is displayed in the "result" element.
-- To start a new game, click the "Reset" button.
+### 5. How to Play
+#### Starting the Game
+- Click the "Let's Play" button in the pop-up window to start the game.
+- The background music begins, and the game board becomes active.
 
-### 7. Conclusion
-The implemented Tic Tac Toe game provides a basic version of the classic game. It demonstrates the use of HTML, CSS, and JavaScript to create an interactive web-based game. Future enhancements could include improved styling, additional features, and enhanced user experience.
+#### Making Moves
+- Players take turns by clicking on empty cells in the grid.
+- When a move is made, the player's symbol ("O" or "X") is displayed in the clicked cell.
+- The game keeps track of the current player's turn and displays a message accordingly.
+
+#### Winning the Game
+- The game checks for win conditions after each move.
+- If a player successfully forms a line of three symbols, they win the game.
+- A message is displayed, and the game ends.
+- If all cells are filled, and no player has won, the game ends in a draw.
+
+### 6. Resetting the Game
+- The "Reset" button allows users to reset the game at any time.
+- Clicking the button clears the game board, resets the turn, and allows players to start a new game.
+
+### 7. Sound Effects
+- Sound effects are implemented for button clicks and game outcomes.
+- Players can control background music using the play and pause buttons.
+- Sound adds an immersive element to the gaming experience.
+
+### 8. Conclusion
+The Tic Tac Toe Game website provides a fun and interactive way for users to enjoy the classic game. It features a user-friendly interface, sound effects, and responsive design. Players can start, play, and reset the game at their convenience, making it an engaging gaming experience.
