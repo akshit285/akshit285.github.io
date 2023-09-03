@@ -8,11 +8,35 @@
     <title>Game</title>
     <!-- <style>
     </style> -->
-    <script src="Logic.js"></script>
+    <script src="javascript/Logic.js"></script>
 </head>
 <body id="main">
     <div>
-        <h1>TIC TAC TOE</h1>
+        <audio id="bg-music" loop>
+            <source src="music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Pop up window -->
+        <div class="popup" id="popup" class="flex_center">
+            <img src="tic-tac-toe-icon.png" class="popup-image"/>
+            <h3>Welcome to TIC TAC TOE!</h3>
+            <img src="excited.gif" class="popup-gif" alt="Tic Tac Toe GIF">
+            <button onclick="showPopup(false)">Let's Play</button>  
+        </div>
+
+        <audio id="button-click-sound" preload="auto">
+            <source src="ting.mp3" type="audio/mpeg">
+            <!-- Add additional <source> elements for different audio formats if needed -->
+        </audio>
+
+        <audio id="game-over-sound" preload="auto">
+            <source src="gameover.mp3" type="audio/mpeg">
+            <!-- Add additional <source> elements for different audio formats if needed -->
+        </audio>        
+        <nav>
+            <h1>TIC TAC TOE</h1>
+        </nav>
         <div id="ins">
             Player 1: O
             <br>
@@ -21,26 +45,34 @@
             <p>Player 1 Starts!</p>
         </div>
         <br>
-        <table class="center">
-            <tr>
-                <td><input id="b1" type="text"></td>
-                <td><input id="b2" type="text"></td>
-                <td><input id="b3" type="text"></td>
-            </tr>
-            <tr>
-                <td><input id="b4" type="text"></td>
-                <td><input id="b5" type="text"></td>
-                <td><input id="b6" type="text"></td>
-            </tr>
-            <tr>
-                <td><input id="b7" type="text"></td>
-                <td><input id="b8" type="text"></td>
-                <td><input id="b9" type="text"></td>
-            </tr>
-        </table>
+        <div class="container">
+            <table class="center">
+                <div class="line"></div>
+                <tr>
+                    <td><input id="b1" type="text"></td>
+                    <td><input id="b2" type="text"></td>
+                    <td><input id="b3" type="text"></td>
+                </tr>
+                <tr>
+                    <td><input id="b4" type="text"></td>
+                    <td><input id="b5" type="text"></td>
+                    <td><input id="b6" type="text"></td>
+                </tr>
+                <tr>
+                    <td><input id="b7" type="text"></td>
+                    <td><input id="b8" type="text"></td>
+                    <td><input id="b9" type="text"></td>
+                </tr>
+            </table>
+        </div>
         <h2 id="result"></h2>
         <button id="Reset">Reset</button>
         <br><br>
+        
+        <div id="music-controls">
+            <button id="play-button" onclick="musicPlay()" class="icon-button" aria-label="Play">▶</button>
+            <button id="pause-button" onclick="musicPause()" class="icon-button" aria-label="Pause">‖‖</button>
+        </div>
     </div>
 </body>
 </html>
