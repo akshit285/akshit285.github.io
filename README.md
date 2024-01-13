@@ -112,3 +112,8 @@ The Tic Tac Toe Game is a web-based two-player game that allows users to play th
 
 ### 8. Conclusion
 The Tic Tac Toe Game website provides a fun and interactive way for users to enjoy the classic game. It features a user-friendly interface, sound effects, and responsive design. Players can start, play, and reset the game at their convenience, making it an engaging gaming experience.
+
+![Screenshot (64)](https://github.com/akshit285/akshit285.github.io/assets/98079528/44944ce1-a0b0-42a5-a048-1d3371ba3676)  ![Screenshot (63)](https://github.com/akshit285/akshit285.github.io/assets/98079528/32eba062-ae71-48e9-a9c5-75a444609784)
+
+
+
